@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Todo & Timer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Todo & Timer</h1>
+      <div class="nav">
+        <button id="btn-home" class="nav-btn active">Home</button>
+        <button id="btn-todo" class="nav-btn">Todo App</button>
+        <button id="btn-timer" class="nav-btn">Timer</button>
+      </div>
+    </header>
+
+    <section id="home" class="view">
+      <h2>Welcome</h2>
+      <p>Use the buttons above to switch between the Todo app and the Timer.</p>
+    </section>
+
+    <section id="todo" class="view hidden">
+      <h2>Todo App</h2>
+      <form id="todo-form" class="todo-form">
+        <input id="todo-input" placeholder="Add a new task" autocomplete="off" />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="todo-list" class="todo-list"></ul>
+    </section>
+
+    <section id="timer" class="view hidden">
+      <h2>Timer</h2>
+      <div class="timer-controls">
+        <label>Minutes: <input id="timer-minutes" type="number" min="0" value="25" /></label>
+        <div class="timer-buttons">
+          <button id="start">Start</button>
+          <button id="pause">Pause</button>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+      <div id="timer-display" class="timer-display">25:00</div>
+    </section>
+
+    <footer>
+      <small>Saved locally in your browser.</small>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
